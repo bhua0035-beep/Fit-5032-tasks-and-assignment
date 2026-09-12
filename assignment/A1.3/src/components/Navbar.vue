@@ -13,11 +13,17 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/calendar">Event Calendar</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" v-if="isAuthenticated">
             <router-link class="nav-link" to="/resources">Resources</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" v-if="currentUser?.role === 'admin'">
+            <router-link class="nav-link text-warning" to="/admin">Admin</router-link>
+          </li>
+          <li class="nav-item" v-if="!isAuthenticated">
             <router-link class="btn btn-outline-light ms-2" to="/auth">Login / Register</router-link>
+          </li>
+          <li class="nav-item" v-else>
+            <button class="btn btn-outline-light ms-2" @click="handleLogout">Logout</button>
           </li>
         </ul>
       </div>
@@ -26,4 +32,14 @@
 </template>
 
 <script setup>
+import { isAuthenticated, currentUser, logout } from '../store.js'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const handleLogout = () => {
+  logout();
+  router.push('/auth');
+}
 </script>
+
