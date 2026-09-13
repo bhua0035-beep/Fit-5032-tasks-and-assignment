@@ -19,7 +19,7 @@
                   type="text" 
                   class="form-control" 
                   id="username" 
-                  v-model="formData.username"
+                  v-model.trim="formData.username"
                   @blur="() => validateUsername(true)"
                   @input="() => validateUsername(false)"
                 >
@@ -35,7 +35,7 @@
                   type="email" 
                   class="form-control" 
                   id="email" 
-                  v-model="formData.email"
+                  v-model.trim="formData.email"
                   @blur="() => validateEmail(true)"
                   @input="() => validateEmail(false)"
                 >
@@ -51,7 +51,7 @@
                   type="password" 
                   class="form-control" 
                   id="password" 
-                  v-model="formData.password"
+                  v-model.trim="formData.password"
                   @blur="() => validatePassword(true)"
                   @input="() => validatePassword(false)"
                 >

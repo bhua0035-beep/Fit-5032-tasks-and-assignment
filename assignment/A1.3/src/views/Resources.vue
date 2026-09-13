@@ -18,10 +18,10 @@
             <form @submit.prevent="addResource">
               <div class="row g-3 align-items-center">
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" v-model="newResource.title" placeholder="Resource Title" required>
+                  <input type="text" class="form-control" v-model.trim="newResource.title" placeholder="Resource Title" required>
                 </div>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" v-model="newResource.type" placeholder="Type (e.g. Article, Video)" required>
+                  <input type="text" class="form-control" v-model.trim="newResource.type" placeholder="Type (e.g. Article, Video)" required>
                 </div>
                 <div class="col-sm-2">
                   <button type="submit" class="btn btn-success w-100">Add</button>
