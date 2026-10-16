@@ -1,0 +1,127 @@
+/* Global Styles & Accessibility Enhancements */
+:root {
+  --primary-color: #2e7d32;
+  --primary-hover: #1b5e20;
+  --secondary-color: #388e3c;
+  --accent-color: #81c784;
+  --bg-light: #f8fbf8;
+  --text-main: #212529;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  min-height: 100vh;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* WCAG 2.1 AA: Skip to Main Content Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #2e7d32;
+  color: #ffffff !important;
+  padding: 8px 16px;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+  outline: 3px solid #ffeb3b;
+}
+
+/* WCAG 2.1 AA: Visible Focus Indicators */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #2e7d32 !important;
+  outline-offset: 2px !important;
+}
+
+/* High Contrast Mode (WCAG 2.1 AAA Contrast) */
+body.high-contrast-mode {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+body.high-contrast-mode .navbar,
+body.high-contrast-mode footer {
+  background-color: #000000 !important;
+  border-bottom: 2px solid #ffff00;
+  border-top: 2px solid #ffff00;
+}
+
+body.high-contrast-mode .card {
+  background-color: #000000 !important;
+  border: 2px solid #ffff00 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast-mode .table {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast-mode .table th,
+body.high-contrast-mode .table td {
+  border-color: #ffff00 !important;
+}
+
+body.high-contrast-mode .btn-success {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  font-weight: bold;
+}
+
+body.high-contrast-mode a {
+  color: #00ffff !important;
+}
+
+/* Font Sizing Controls */
+body.font-large {
+  font-size: 1.15rem;
+}
+
+body.font-xlarge {
+  font-size: 1.3rem;
+}
+
+/* Interactive Table Styling */
+.table-hover tbody tr:hover {
+  background-color: rgba(46, 125, 50, 0.05);
+}
+
+.sortable-th {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortable-th:hover {
+  background-color: #e8f5e9;
+}
+
+/* Leaflet Map Container */
+.map-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Conflict Indicator Pulse */
+@keyframes conflictPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.conflict-alert {
+  animation: conflictPulse 1.5s infinite;
+  border: 2px solid #dc3545;
+}
