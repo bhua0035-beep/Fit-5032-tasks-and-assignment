@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home.vue';
 import Resources from './views/Resources.vue';
+import EventsTable from './views/EventsTable.vue';
+import MapView from './views/MapView.vue';
 import Calendar from './views/Calendar.vue';
 import EmailCenter from './views/EmailCenter.vue';
 import AdminDashboard from './views/AdminDashboard.vue';
@@ -10,6 +12,8 @@ import { isAuthenticated, currentUser } from './store.js';
 const routes = [
   { path: '/', name: 'Home', component: Home, meta: { title: 'Home - EcoYouth Action' } },
   { path: '/resources', name: 'Resources', component: Resources, meta: { title: 'Resources Library', requiresAuth: true } },
+  { path: '/events', name: 'Events', component: EventsTable, meta: { title: 'Events Schedule' } },
+  { path: '/map', name: 'Map', component: MapView, meta: { title: 'Impact Map & Routing' } },
   { path: '/calendar', name: 'Calendar', component: Calendar, meta: { title: 'Counseling Calendar & Conflict Management' } },
   { path: '/email-center', name: 'EmailCenter', component: EmailCenter, meta: { title: 'Email Center', requiresAdmin: true } },
   { path: '/admin', name: 'Admin', component: AdminDashboard, meta: { title: 'Admin Dashboard', requiresAdmin: true } },

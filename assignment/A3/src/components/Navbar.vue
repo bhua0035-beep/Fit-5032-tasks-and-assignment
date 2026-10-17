@@ -32,6 +32,12 @@
               <router-link class="nav-link" to="/resources">Resources Library</router-link>
             </li>
             <li class="nav-item">
+              <router-link class="nav-link" to="/events">Events Directory</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/map">Impact Map</router-link>
+            </li>
+            <li class="nav-item">
               <router-link class="nav-link" to="/calendar">Counseling Booking</router-link>
             </li>
             <li class="nav-item" v-if="currentUser?.role === 'admin'">
