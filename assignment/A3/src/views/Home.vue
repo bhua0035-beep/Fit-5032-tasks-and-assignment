@@ -19,6 +19,12 @@
               <router-link to="/resources" class="btn btn-outline-success btn-lg px-4">
                 📚 Coping Library
               </router-link>
+              <router-link to="/map" class="btn btn-outline-primary btn-lg px-4">
+                🗺️ Find Climate Hubs
+              </router-link>
+              <router-link to="/ai-coach" class="btn btn-outline-secondary btn-lg px-4">
+                🌱 Coping Assistant
+              </router-link>
             </div>
           </div>
           <div class="col-lg-5 text-center">
@@ -75,6 +81,21 @@
           </div>
 
           <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0 border-top border-4 border-primary">
+              <div class="card-body">
+                <div class="fs-1 mb-3 text-primary" aria-hidden="true">📍</div>
+                <h5 class="fw-bold">Geospatial Climate Hubs</h5>
+                <p class="text-muted small">
+                  Locate drop-in centers, community gardens, and coastal resilience circles across Victoria with route and travel-time estimates.
+                </p>
+                <router-link to="/map" class="stretched-link text-primary fw-semibold">
+                  View Map & Routing &rarr;
+                </router-link>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm border-0 border-top border-4 border-warning">
               <div class="card-body">
                 <div class="fs-1 mb-3 text-warning" aria-hidden="true">🤝</div>
@@ -89,6 +110,20 @@
             </div>
           </div>
 
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0 border-top border-4 border-info">
+              <div class="card-body">
+                <div class="fs-1 mb-3 text-info" aria-hidden="true">📊</div>
+                <h5 class="fw-bold">Impact Analytics & Charts</h5>
+                <p class="text-muted small">
+                  Explore interactive views of community wellbeing, workshop capacity, and eco-anxiety reduction trends.
+                </p>
+                <router-link to="/analytics" class="stretched-link text-info fw-semibold">
+                  Explore Interactive Charts &rarr;
+                </router-link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@
       <div class="col-12">
         <h1 class="h2 fw-bold text-success mb-1">Melbourne Youth Climate & Eco-Anxiety Hubs Map</h1>
         <p class="text-muted mb-0">
-          Find drop-in counseling centers, urban greening projects, and community resilience spaces. Get real-time routing and trip details.
+          Find drop-in counseling centers, urban greening projects, and community resilience spaces. Compare route and trip estimates.
         </p>
       </div>
     </div>
@@ -61,7 +61,7 @@
       <div class="col-lg-6">
         <div class="card shadow-sm border-0 h-100">
           <div class="card-header bg-primary text-white py-2 d-flex justify-content-between align-items-center">
-            <strong class="small">Feature 2: Real-Time Routing & Trip Information</strong>
+            <strong class="small">Feature 2: Route Estimates & Trip Information</strong>
             <button class="btn btn-sm btn-light py-0 px-2" @click="useCurrentLocation" title="Detect GPS coordinates">
               🎯 Use My GPS Location
             </button>
@@ -136,10 +136,10 @@
           </div>
         </div>
 
-        <!-- Turn-by-Turn Guidance Card -->
+        <!-- Illustrative Route Guidance Card -->
         <div class="card shadow-sm border-0" v-if="tripInfo && routeDirections.length">
           <div class="card-header bg-secondary text-white py-2">
-            <strong class="small">Turn-by-Turn Route Guidance</strong>
+            <strong class="small">Illustrative Route Guidance</strong>
           </div>
           <ul class="list-group list-group-flush small" style="max-height: 250px; overflow-y: auto;">
             <li v-for="(step, idx) in routeDirections" :key="idx" class="list-group-item">
@@ -384,7 +384,7 @@ const calculateRoute = () => {
     transitMinutes: transitMins
   };
 
-  // Turn-by-Turn Directions
+  // Illustrative route guidance
   routeDirections.value = [
     `Depart from ${orig.name || 'Your Location'}.`,
     `Proceed towards ${dest.address.split(',')[0]} via Melbourne central bicycle / transit corridor.`,

@@ -107,7 +107,7 @@
             </form>
 
             <div v-if="sendSuccessMessage" class="alert alert-success mt-4 mb-0">
-              <h6 class="fw-bold mb-1">✓ Email Successfully Delivered!</h6>
+              <h6 class="fw-bold mb-1">✓ Email Simulation Completed</h6>
               <p class="small mb-0">{{ sendSuccessMessage }}</p>
             </div>
           </div>
@@ -308,7 +308,7 @@ const dispatchBulkEmail = () => {
       clearInterval(interval);
       setTimeout(() => {
         bulkProgress.active = false;
-        alert(`Bulk Campaign Successfully Sent! ${bulkProgress.total} emails dispatched with attached "${bulkAttachment.value}.pdf".`);
+        alert(`Bulk campaign simulation completed for ${bulkProgress.total} selected recipients with "${bulkAttachment.value}.pdf".`);
       }, 500);
     }
   }, 350);

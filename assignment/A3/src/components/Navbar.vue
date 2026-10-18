@@ -40,6 +40,12 @@
             <li class="nav-item">
               <router-link class="nav-link" to="/calendar">Counseling Booking</router-link>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/analytics">Analytics & Charts</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link text-white fw-semibold" to="/ai-coach">🌱 Coping Assistant</router-link>
+            </li>
             <li class="nav-item" v-if="currentUser?.role === 'admin'">
               <router-link class="nav-link text-info fw-semibold" to="/email-center">📧 Email Center</router-link>
             </li>
@@ -50,7 +56,7 @@
 
           <!-- Accessibility Toolbar & User Auth -->
           <div class="d-flex align-items-center flex-wrap gap-2">
-            <!-- Online / Offline Network Status Pill -->
+            <!-- Online / Offline Network Status Pill (BR F.1 Offline Feature) -->
             <span 
               class="badge rounded-pill px-2 py-1 text-white" 
               :class="isOnline ? 'bg-dark' : 'bg-danger'" 

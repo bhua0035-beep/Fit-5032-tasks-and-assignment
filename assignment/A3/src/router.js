@@ -4,6 +4,8 @@ import Resources from './views/Resources.vue';
 import EventsTable from './views/EventsTable.vue';
 import MapView from './views/MapView.vue';
 import Calendar from './views/Calendar.vue';
+import Analytics from './views/Analytics.vue';
+import AICoach from './views/AICoach.vue';
 import EmailCenter from './views/EmailCenter.vue';
 import AdminDashboard from './views/AdminDashboard.vue';
 import Auth from './views/Auth.vue';
@@ -15,6 +17,8 @@ const routes = [
   { path: '/events', name: 'Events', component: EventsTable, meta: { title: 'Events Schedule' } },
   { path: '/map', name: 'Map', component: MapView, meta: { title: 'Impact Map & Routing' } },
   { path: '/calendar', name: 'Calendar', component: Calendar, meta: { title: 'Counseling Calendar & Conflict Management' } },
+  { path: '/analytics', name: 'Analytics', component: Analytics, meta: { title: 'Impact Analytics & Charts' } },
+  { path: '/ai-coach', name: 'AICoach', component: AICoach, meta: { title: 'Youth Coping Assistant' } },
   { path: '/email-center', name: 'EmailCenter', component: EmailCenter, meta: { title: 'Email Center', requiresAdmin: true } },
   { path: '/admin', name: 'Admin', component: AdminDashboard, meta: { title: 'Admin Dashboard', requiresAdmin: true } },
   { path: '/auth', name: 'Auth', component: Auth, meta: { title: 'Sign In / Register' } },
