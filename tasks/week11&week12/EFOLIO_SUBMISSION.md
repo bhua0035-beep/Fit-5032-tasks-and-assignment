@@ -6,11 +6,13 @@
 
 ### Deployed project link
 
-**Cloudflare Pages URL:** `https://bhua0035-week11-12-library.pages.dev/`
+**Git-connected Cloudflare Pages URL:** `https://fit-5032-tasks-and-assignment.pages.dev/`
+
+**Direct C3/Wrangler deployment URL:** `https://bhua0035-week11-12-library.pages.dev/`
 
 ### Deployment from Git
 
-The Week 10 NoMash Library project was deployed to Cloudflare Pages from the GitHub repository. The Pages build uses `tasks/week11&week12` as its root directory, runs `npm ci && npm run build`, and publishes the `dist` directory. The OpenWeather API key is supplied as the `VITE_OPENWEATHER_API_KEY` build environment variable rather than committed to source control.
+The Week 10 NoMash Library project was deployed to Cloudflare Pages from the GitHub repository. Because the project folder contains an ampersand, the Pages project keeps the repository root blank and runs `npm ci --prefix 'tasks/week11&week12' && npm --prefix 'tasks/week11&week12' run build && cp -R 'tasks/week11&week12/dist' week11-12-dist`; Cloudflare publishes `week11-12-dist`. The production branch is `main`. The OpenWeather API key is supplied as the `VITE_OPENWEATHER_API_KEY` build environment variable rather than committed to source control.
 
 **Evidence:** `[insert evidence/week11-cloudflare-git.png here]`
 

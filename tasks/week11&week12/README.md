@@ -49,12 +49,12 @@ Create a Cloudflare Pages project connected to the repository and use:
 | Setting | Value |
 | --- | --- |
 | Production branch | `main` |
-| Root directory | `tasks/week11&week12` |
-| Build command | `npm ci && npm run build` |
-| Build output directory | `dist` |
+| Root directory | Leave blank (`/`) |
+| Build command | `npm ci --prefix 'tasks/week11&week12' && npm --prefix 'tasks/week11&week12' run build && cp -R 'tasks/week11&week12/dist' week11-12-dist` |
+| Build output directory | `week11-12-dist` |
 | Environment variable | `VITE_OPENWEATHER_API_KEY` = the Week 10 OpenWeather key |
 
-After deployment, open `/WeatherCheck`, allow location access, and confirm that the weather card displays a place, temperature, icon, and description.
+The Git-connected deployment is available at `https://fit-5032-tasks-and-assignment.pages.dev/`. After deployment, open `/WeatherCheck`, allow location access, and confirm that the weather card displays a place, temperature, icon, and description.
 
 ### 11.1b - Deploy directly from the IDE with C3/Wrangler
 
