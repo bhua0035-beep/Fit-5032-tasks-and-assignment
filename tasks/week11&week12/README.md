@@ -38,7 +38,7 @@ npm run build:github
 npm run preview
 ```
 
-`build:github` also creates `dist/404.html` so direct visits to Vue Router routes work on GitHub Pages.
+`build:github` creates `dist/404.html` plus static entry pages for every known Vue route. This keeps history-mode URLs and ensures direct visits such as `/WeatherCheck` return HTTP 200 on GitHub Pages.
 
 ## Week 11: Cloudflare Pages
 

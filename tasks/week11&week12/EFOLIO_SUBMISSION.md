@@ -6,7 +6,7 @@
 
 ### Deployed project link
 
-**Cloudflare Pages URL:** `[paste the working *.pages.dev URL here]`
+**Cloudflare Pages URL:** `https://bhua0035-week11-12-library.pages.dev/`
 
 ### Deployment from Git
 
