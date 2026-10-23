@@ -91,7 +91,7 @@ Before the first run:
 4. Capture the workflow while it is running and after it succeeds.
 5. Verify the deployed home page and `/WeatherCheck` route.
 
-The expected GitHub Pages address for the current remote is:
+The deployed GitHub Pages address for the current remote is:
 
 ```text
 https://bhua0035-beep.github.io/Fit-5032-tasks-and-assignment/

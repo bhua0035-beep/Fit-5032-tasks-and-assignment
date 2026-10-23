@@ -38,9 +38,13 @@ The deployment uses Vue Router history mode. Cloudflare Pages recognises the out
 
 **GitHub Pages URL:** `https://bhua0035-beep.github.io/Fit-5032-tasks-and-assignment/`
 
+**Successful workflow run:** `https://github.com/bhua0035-beep/Fit-5032-tasks-and-assignment/actions/runs/39911468886`
+
 The workflow at `.github/workflows/week11-12-pages.yml` runs on pushes to `main` that change this project and can also be started manually. It checks out the repository, installs Node.js 24, restores npm's dependency cache, installs exact locked dependencies with `npm ci`, runs ESLint as a CI quality gate, builds the Vue application with the correct repository base path, uploads the `dist` artifact, and deploys it with GitHub's official Pages actions. GitHub's environment and ID-token permissions are limited to what the Pages deployment requires.
 
 The workflow supplies the OpenWeather key through the `VITE_OPENWEATHER_API_KEY` repository secret, so it is not stored in the workflow or source files. The resulting client bundle still contains the value, which is why a deployable browser API key must be restricted or replaced with a server-side proxy for sensitive production use.
+
+The deployed root page and direct history-mode routes including `/WeatherCheck`, `/json-lab`, and `/books/add` were verified to return HTTP 200 after the workflow completed.
 
 **Evidence showing the workflow running:** `[insert evidence/week12-github-action-running.png here]`
 
