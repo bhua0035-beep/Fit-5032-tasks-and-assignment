@@ -1,0 +1,42 @@
+{
+  "name": "nomash-library-week11-12",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node node_modules/vite/bin/vite.js",
+    "build": "node node_modules/vite/bin/vite.js build",
+    "build:github": "node node_modules/vite/bin/vite.js build && node scripts/create-github-pages-fallback.mjs",
+    "preview": "node node_modules/vite/bin/vite.js preview",
+    "cloudflare:login": "node node_modules/wrangler/bin/wrangler.js login",
+    "preview:cloudflare": "npm run build && node node_modules/wrangler/bin/wrangler.js pages dev dist",
+    "deploy:cloudflare": "npm run build && node node_modules/wrangler/bin/wrangler.js pages deploy dist",
+    "lint": "node node_modules/eslint/bin/eslint.js . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "lint:check": "node node_modules/eslint/bin/eslint.js . --ext .vue,.js,.jsx,.cjs,.mjs --ignore-path .gitignore",
+    "format": "node node_modules/prettier/bin/prettier.cjs --write src/"
+  },
+  "dependencies": {
+    "@primevue/themes": "^4.0.4",
+    "axios": "^1.20.0",
+    "bootstrap": "^5.3.3",
+    "firebase": "^12.19.0",
+    "primevue": "^4.5.5",
+    "vue": "^3.4.29",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "prettier": "^3.2.5",
+    "vite": "^5.3.1",
+    "vite-plugin-vue-devtools": "^7.3.1",
+    "wrangler": "^4.152.0"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "1.14.6",
+    "source-map-js": "1.2.2"
+  }
+}
